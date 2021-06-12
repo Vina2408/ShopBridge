@@ -1,0 +1,15 @@
+﻿CREATE DATABASE ShopBridge
+GO
+USE ShopBridge
+GO
+Create TABLE Products(Id INT PRIMARY KEY IDENTITY(1,1),
+					  Name VARCHAR(50) NOT NULL,
+					  Description VARCHAR(200) NOT NULL,
+					  Price DECIMAL(18,2) NOT NULL,
+					  CreatedOn DateTime NOT NULL,
+					  IsActive BIT NOT NULL)
+
+CREATE TABLE T_ExceptionLog(LogId INT PRIMARY KEY,
+							ExceptionMessage VARCHAR(MAX),
+							DateOn DATETIME,
+							StackTrace VARCHAR(MAX))
